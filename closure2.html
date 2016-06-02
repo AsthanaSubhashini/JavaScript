@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>My closure program for variables</title>
+	</head>
+		<body>
+			<script>
+				// Global variable "a"
+				var a = 10;                                                                                                                                                                                         // Outer function addouter
+				var addouter = function(){
+				var b = 20;
+  
+				// Inner function addinner
+				var addinner = function(){
+				return (a + b);
+				}
+				return addinner;
+				}                                                                                                                                                                                                   // Call outer function which returns addinner as a variable.
+				var result = addouter();
+				// As result variable contains variable addinner which is nothing but a function
+				// so we have to call result() as a function.
+				document.writeln(result());  
+
+           </script>
+        </body>
+</html>
